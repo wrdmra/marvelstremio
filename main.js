@@ -63,8 +63,8 @@ const MCU_CHRONOLOGICAL_IMDB_IDS = [
   "tt4154796", // Avengers: Endgame
   "tt9376612", // Shang-Chi and the Legend of the Ten Rings
   "tt6320628", // Spider-Man: Far From Home
-  "tt10872600", // Spider-Man: No Way Home
   "tt9032400", // Eternals
+  "tt10872600", // Spider-Man: No Way Home
   "tt9419884", // Doctor Strange in the Multiverse of Madness
   "tt9114286", // Black Panther: Wakanda Forever
   "tt10648342", // Thor: Love and Thunder
