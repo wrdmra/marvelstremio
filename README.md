@@ -4,7 +4,7 @@ Ein schlankes Stremio-Katalog-Add-on mit genau drei Reihen:
 
 - **Marvel: Serien** – Marvel-Realserien
 - **Marvel: Filme** – Marvel-Filme in Veröffentlichungsreihenfolge
-- **MCU: Filme chronologisch** – MCU-Kinofilme nach der offiziellen Handlungschronologie; noch nicht offiziell platzierte Zukunftsfilme und TV-Specials sind ausgenommen
+- **MCU: Filme chronologisch** – MCU-Kinofilme nach Marvels offizieller Disney+-Timeline; noch nicht offiziell platzierte Zukunftsfilme und TV-Specials sind ausgenommen
 
 Das Add-on stellt **keine Streams** bereit. Alle Einträge verwenden IMDb-IDs, damit installierte Metadaten- und Wiedergabe-Add-ons sie auflösen können.
 
@@ -43,3 +43,14 @@ npm test
 Die kuratierten Titellisten, Metadaten und Bilddateien basieren auf dem Projekt [joaogonp/addon-marvel](https://github.com/joaogonp/addon-marvel), Copyright © 2025 joaogonp. Die ursprünglichen Lizenzbedingungen stehen in `LICENSE`. Server, Routing, Typzuordnung, Installationsseite und Tests wurden für diese Variante neu aufgebaut.
 
 Marvel, die Charakternamen und zugehörige Marken gehören ihren jeweiligen Rechteinhabern. Dieses Fanprojekt ist nicht mit Marvel Entertainment oder Disney verbunden.
+
+## Grundlage der chronologischen Reihenfolge
+
+Die Filmfolge wird aus Marvels offizieller **MCU Complete Timeline** abgeleitet, wobei Serien, Staffeln, One-Shots und TV-Specials herausgefiltert werden. `Spider-Man: No Way Home` fehlt in manchen Disney+-Listen aus Vertriebsgründen; er wird zwischen `Eternals` und `Doctor Strange in the Multiverse of Madness` ergänzt. Marvel bestätigt ausdrücklich, dass `No Way Home` vor `Multiverse of Madness` spielt.
+
+`The Fantastic Four: First Steps` spielt intern in einem alternativen, retrofuturistischen Universum. Er steht dennoch am Ende des Katalogs, weil Marvel/Disney+ ihn dort in der übergreifenden MCU-Ansehreihenfolge platziert. Der Katalog ist daher eine **chronologische Ansehreihenfolge**, keine gemeinsame Kalenderachse über alle Paralleluniversen.
+
+Quellen:
+
+- [Marvel: See the Complete MCU Timeline on Disney+](https://www.marvel.com/articles/movies/mcu-timeline-order-disney-plus)
+- [Marvel: Kevin Feige Connects Multiverse of Madness to Loki & No Way Home](https://www.marvel.com/articles/movies/doctor-strange-in-the-multiverse-of-madness-loki-spider-man-no-way-home-kevin-feige-connects)
