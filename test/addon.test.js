@@ -68,6 +68,16 @@ test("Die chronologische MCU-Reihe beginnt in Handlungsreihenfolge", () => {
       ["Werewolf by Night", "The Guardians of the Galaxy Holiday Special"].includes(name),
     ),
   );
+  const phaseFourNames = catalogData["mcu-chronological"]
+    .slice(23, 28)
+    .map(({ name }) => name);
+  assert.deepEqual(phaseFourNames, [
+    "Shang-Chi and the Legend of the Ten Rings",
+    "Spider-Man: Far From Home",
+    "Eternals",
+    "Spider-Man: No Way Home",
+    "Doctor Strange in the Multiverse of Madness",
+  ]);
 });
 
 test("Stremio-Skip-Parameter wird aus dem Pfad gelesen", () => {
