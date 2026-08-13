@@ -1,14 +1,1 @@
-{
-  "name": "marvel-stremio-addon-de",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "description": "Stremio-Katalog für Marvel-Serien, Marvel-Filme und MCU-Filme in chronologischer Reihenfolge.",
-  "engines": {
-    "node": ">=20"
-  },
-  "scripts": {
-    "start": "node main.js",
-    "test": "node --test"
-  }
-}
+{  "name": "marvel-stremio-addon-de",  "version": "1.1.0",  "private": true,  "type": "module",  "description": "Stremio catalog for Marvel series, Marvel movies, and MCU movies in chronological timeline order.",  "engines": {    "node": ">=20"  },  "scripts": {    "start": "node main.js",    "test": "node --test"  }}
