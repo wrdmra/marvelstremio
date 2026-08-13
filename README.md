@@ -1,56 +1,66 @@
-# Marvel Katalog DE für Stremio
+# Marvel Catalog for Stremio
 
-Ein schlankes Stremio-Katalog-Add-on mit genau drei Reihen:
+A lightweight Stremio catalog add-on with exactly three rows:
 
-- **Marvel: Serien** – Marvel-Realserien
-- **Marvel: Filme** – Marvel-Filme in Veröffentlichungsreihenfolge
-- **MCU: Filme chronologisch** – MCU-Kinofilme nach Marvels offizieller Disney+-Timeline; noch nicht offiziell platzierte Zukunftsfilme und TV-Specials sind ausgenommen
+- **Marvel: Series** – live-action Marvel series
+- **Marvel: Movies** – Marvel movies in release order
+- **MCU: Movies in Timeline Order** – MCU theatrical movies following Marvel's official Disney+ timeline; upcoming films without an official placement and TV specials are excluded
 
-Das Add-on stellt **keine Streams** bereit. Alle Einträge verwenden IMDb-IDs, damit installierte Metadaten- und Wiedergabe-Add-ons sie auflösen können.
+This add-on provides **no streams**. All entries use IMDb IDs so installed metadata and streaming add-ons can resolve them.
 
-## Lokal starten
+## Install
 
-Voraussetzung: Node.js 20 oder neuer.
+Open [marvelstremio.onrender.com](https://marvelstremio.onrender.com) and select **Install in Stremio**. Alternatively, add this manifest URL directly in Stremio:
+
+```text
+https://marvelstremio.onrender.com/manifest.json
+```
+
+The free Render instance may take up to a minute to wake up after a period of inactivity.
+
+## Run locally
+
+Requirement: Node.js 20 or newer.
 
 ```bash
 npm start
 ```
 
-Danach im Browser `http://localhost:7000` öffnen und auf **In Stremio installieren** klicken. Alternativ kann diese Manifest-Adresse in Stremio eingefügt werden:
+Then open `http://localhost:7000` in your browser and select **Install in Stremio**. Alternatively, add this manifest URL to Stremio:
 
 ```text
 http://localhost:7000/manifest.json
 ```
 
-Hinweis: Ein lokal laufendes Add-on ist nur erreichbar, solange der Rechner und der Prozess laufen. Für die dauerhafte Nutzung muss der Ordner bei einem Node.js-Host mit HTTPS veröffentlicht werden. Der Startbefehl ist `npm start`; der Host muss die Umgebungsvariable `PORT` setzen dürfen.
+A locally running add-on is only available while the computer and process are running. For permanent use, deploy the folder to a Node.js host with HTTPS. The start command is `npm start`; the host must be allowed to set the `PORT` environment variable.
 
-## Testen
+## Test
 
 ```bash
 npm test
 ```
 
-## Endpunkte
+## Endpoints
 
-- `/manifest.json` – Stremio-Manifest
-- `/catalog/series/marvel-series.json` – Serien
-- `/catalog/movie/marvel-movies.json` – Filme
-- `/catalog/movie/mcu-chronological.json` – chronologische MCU-Filme
-- `/health` – Status und Anzahl der Einträge
+- `/manifest.json` – Stremio manifest
+- `/catalog/series/marvel-series.json` – series
+- `/catalog/movie/marvel-movies.json` – movies
+- `/catalog/movie/mcu-chronological.json` – MCU movies in timeline order
+- `/health` – service status and item counts
 
-## Herkunft der Katalogdaten
+## Catalog data
 
-Die kuratierten Titellisten, Metadaten und Bilddateien basieren auf dem Projekt [joaogonp/addon-marvel](https://github.com/joaogonp/addon-marvel), Copyright © 2025 joaogonp. Die ursprünglichen Lizenzbedingungen stehen in `LICENSE`. Server, Routing, Typzuordnung, Installationsseite und Tests wurden für diese Variante neu aufgebaut.
+The curated title lists, metadata, and artwork are based on [joaogonp/addon-marvel](https://github.com/joaogonp/addon-marvel), Copyright © 2025 joaogonp. The original license terms are included in `LICENSE`. The server, routing, media-type mapping, installation page, and tests were rebuilt for this version.
 
-Marvel, die Charakternamen und zugehörige Marken gehören ihren jeweiligen Rechteinhabern. Dieses Fanprojekt ist nicht mit Marvel Entertainment oder Disney verbunden.
+Marvel, its character names, and related trademarks belong to their respective owners. This fan project is not affiliated with Marvel Entertainment or Disney.
 
-## Grundlage der chronologischen Reihenfolge
+## Basis for the timeline order
 
-Die Filmfolge wird aus Marvels offizieller **MCU Complete Timeline** abgeleitet, wobei Serien, Staffeln, One-Shots und TV-Specials herausgefiltert werden. `Spider-Man: No Way Home` fehlt in manchen Disney+-Listen aus Vertriebsgründen; er wird zwischen `Eternals` und `Doctor Strange in the Multiverse of Madness` ergänzt. Marvel bestätigt ausdrücklich, dass `No Way Home` vor `Multiverse of Madness` spielt.
+The movie list is derived from Marvel's official **MCU Complete Timeline**, with series, seasons, One-Shots, and TV specials filtered out. `Spider-Man: No Way Home` is missing from some Disney+ lists for distribution reasons, so it is placed between `Eternals` and `Doctor Strange in the Multiverse of Madness`. Marvel explicitly confirms that `No Way Home` takes place before `Multiverse of Madness`.
 
-`The Fantastic Four: First Steps` spielt intern in einem alternativen, retrofuturistischen Universum. Er steht dennoch am Ende des Katalogs, weil Marvel/Disney+ ihn dort in der übergreifenden MCU-Ansehreihenfolge platziert. Der Katalog ist daher eine **chronologische Ansehreihenfolge**, keine gemeinsame Kalenderachse über alle Paralleluniversen.
+`The Fantastic Four: First Steps` takes place in an alternate retrofuturistic universe. It nevertheless appears at the end of the catalog because Marvel and Disney+ place it there in the overall MCU viewing order. This catalog is therefore a **chronological viewing order**, not a single shared calendar across every parallel universe.
 
-Quellen:
+Sources:
 
 - [Marvel: See the Complete MCU Timeline on Disney+](https://www.marvel.com/articles/movies/mcu-timeline-order-disney-plus)
 - [Marvel: Kevin Feige Connects Multiverse of Madness to Loki & No Way Home](https://www.marvel.com/articles/movies/doctor-strange-in-the-multiverse-of-madness-loki-spider-man-no-way-home-kevin-feige-connects)
